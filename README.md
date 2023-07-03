@@ -4,7 +4,7 @@
 # BeautifulSoup is used to scrab data from website
 # it shows live data of covid-19 
 # To run:
-# setup environment
-# run script 
-# active
-# run main file
+setup environment
+run script 
+active
+ run main file
