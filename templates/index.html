@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>NEPAL LIVE COVID-19 TRACKER</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: black;
+            color: white;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: white;
+        }
+
+        .country-box {
+            background-color: #8e44ad;
+            border: 1px solid #9b59b6;
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 20px;
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .country-box h2 {
+            margin-top: 0;
+            color: white;
+            font-size: 20px;
+            margin-bottom: 10px;
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .data-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px; 
+        }
+
+        .data-box {
+            border: 1px solid #444;
+            padding: 40px; 
+            flex: 1;
+            text-align: center;
+            margin: 0 5px; /* Adjusted spacing between boxes */
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .data-box:hover {
+            transform: scale(1.05); /* Scale up the box on hover */
+        }
+
+        .country-box:hover {
+            transform: scale(1.05); /* Scale up the box on hover */
+        }
+
+        .total-cases {
+            background-color: #FF5733;
+        }
+
+        .new-cases {
+            background-color: #FFC300;
+        }
+
+        .total-deaths {
+            background-color: #C70039;
+        }
+
+        .new-deaths {
+            background-color: #900C3F;
+        }
+
+        .total-recovered {
+            background-color: #00B894;
+        }
+
+        .active-cases {
+            background-color: #0984E3;
+        }
+
+        .data-box h3 {
+            margin-top: 0;
+            color: white;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .data-box span {
+            font-weight: normal;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>NEPAL LIVE COVID-19 TRACKER</h1>
+        <div class="country-box">
+            <h2>Our Country</h2>
+            <p>{{ result['Country name'] }}</p>
+        </div>
+        <div class="data-row">
+            <div class="data-box total-cases">
+                <h3>Total Cases</h3>
+                <span>{{ result['Total cases'] }}</span>
+            </div>
+            <div class="data-box new-cases">
+                <h3>New Cases</h3>
+                <span>{{ result['New cases'] }}</span>
+            </div>
+            <div class="data-box total-deaths">
+                <h3>Total Deaths</h3>
+                <span>{{ result['Total deaths'] }}</span>
+            </div>
+        </div>
+        <div class="data-row">
+            <div class="data-box new-deaths">
+                <h3>New Deaths</h3>
+                <span>{{ result['New deaths'] }}</span>
+            </div>
+            <div class="data-box total-recovered">
+                <h3>Total Recovered</h3>
+                <span>{{ result['Total recovered'] }}</span>
+            </div>
+            <div class="data-box active-cases">
+                <h3>Active Cases</h3>
+                <span>{{ result['Active cases'] }}</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
